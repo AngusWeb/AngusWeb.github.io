@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/a7e9f794eb.js" crossorigin="anonymous"></script>
+    <link href="<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected Page</title>
+    <link rel="stylesheet" type="text/css" href="loginstyles.css">
+</head>
+<body>
+    <div class="container">
+        <input type="checkbox" name="" id="menuBtn">
+        
+        <div class="menu_overlay">
+            <div class="overlay-container">
+          <label for="menuBtn">
+            <i class="fas fa-times"></i>
+          </label>
+          
+            </div>
+			
+      <nav class="fullscreen-menu">
+          <div class="menu-item">
+              
+                  <a href="index.html">
+                      <span>Home</span>
+                      <img src="home.png" alt="Image 1">
+                  </a>
+              
+          </div>
+          <div class="menu-item">
+              
+                  <a href="page2.html">
+                      <span>Economic interests</span>
+                      <img src="econimage.jpg" alt="Image 2">
+                  </a>
+               
+          </div>
+              <div class="menu-item">
+                  <a href="page3.html">
+                      <span>Programming</span>
+                      <img src="programmingimage.jpg" alt="Image 3">
+                  </a>
+              </div>
+              <div class="menu-item">
+                  <a href="page4.html">
+                      <span>Other interests</span>
+                      <img src="esportsimage1.jpg" alt="Image 4">
+                  </a>
+              </div>
+              <div class="menu-item">
+                  <a href="page5.html">
+                      <span>Programming</span>
+                      <img src="programmingimage - Copy.jpg" alt="Image 5">
+                  </a>
+              </div>
+          </nav>
+          
+		</div>
+        
+        
+          </div>
+          <div class="landing_page">
+            <div class="menu">
+              <label for="menuBtn">
+                <i class="fas fa-bars"></i>
+              </label>
+            </div>
+    <div id="wrapper">
+    <div id="password-form">
+        <h2>Enter the Password</h2>
+        <form onsubmit="checkPassword(); return false;">
+            <input type="password" id="password" placeholder="Password" required>
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="message"></p>
+    </div>
+    </div>
+</div>
+    <script src="login.js"></script>
+</body>
+</html>

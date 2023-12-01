@@ -1,0 +1,422 @@
+body, h1, h2, p, html, div {
+  margin: 0;
+  padding: 0;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Set a light background color and text color */
+body {
+    background-color: white;
+    
+    
+    /* background-image: url('backgroundv1.jpg'); */
+    /* background-size: cover; /* Adjust this based on your design */
+    /* background-position: center center;  Adjust this based on your design */
+    overflow-x: hidden;
+    font-family: "Montserrat", sans-serif;
+    
+    --color-primary: rgb(138, 132, 132);
+    --color-secondary: white;
+}
+
+/* Style the header */
+header {
+  /*background-color: #fff; */
+  text-align: center;
+  padding: 0px;
+  font-size: 30px;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the navigation menu  for html buttons*/
+nav ul {
+  list-style: none;
+  text-align: center;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  display: inline-block;
+  width: 50%; 
+}
+
+nav li {
+display: inline;
+margin: 0 20px;
+padding: 5px 10px; 
+
+}
+
+
+/* Style of the main big text box */
+
+/* Style the footer */
+footer {
+  text-align: center;
+  padding: 0px;
+  /*background-color: #fff; */
+  
+}
+
+
+.full-screen-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Remove the background-color property here */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:black;
+    /*background-image: url('backgroundv1.jpg'); */
+    background-size: cover; /* Adjust this based on your design */
+    background-position: center center; /* Adjust this based on your design */
+    
+}
+
+
+.animation h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid white; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .05em; /* Adjust as needed */
+    font-size: 100px;
+    font-weight: 500;
+    font-family: Courier, monospace;
+    color: white;
+    animation: 
+      typing 2.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+  }
+
+
+
+  
+  .fullscreen-menu {
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background:white;
+    z-index: 1;
+    font-family: "Press Start 2P", cursive;
+  }
+  
+  @keyframes bounce {
+    0%, 25%, 50%, 75%, 100% {
+      transform: scale(1);
+    }
+    12%, 87% {
+      transform: scale(1.03) rotate(2deg);
+    }
+    37%, 62% {
+      transform: scale(1.03) rotate(-2deg);
+    }
+  }
+  
+  .fullscreen-menu .menu-item {
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.7s ease-in-out;
+    transition: margin-left ease-in 2s;
+    
+  }
+  
+  .fullscreen-menu .menu-item > a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .fullscreen-menu .menu-item > a > span {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    height: 20%;
+    margin-left: 120px;
+    
+    font-size: 60px;
+    
+    color: var(--color-primary);
+  }
+  
+  .menu-item:not(:hover) {
+    
+    height: 33.33vh;
+    margin-bottom: 1vh;
+    width: 90%;
+    margin-left: auto;
+  }
+  
+  
+  .menu-item:hover {
+    background: grey;
+  
+    height: auto;
+    
+    width: 100%;
+    
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .menu-item:hover a span {
+    color: var(--color-secondary);
+    
+  }
+  
+  .fullscreen-menu .menu-item > a > img {
+    flex-shrink: 0;
+    height: 100%;
+    margin-left: auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, width 2s ease infinite;
+    max-height: 100%;
+    width: 200px;
+    height: 300px;
+    animation: bounce 2s ease infinite;
+  }
+  
+  .menu-item:hover a img {
+    width: 400px;
+    height: 600px;
+    opacity: 1;
+  }
+  .page {
+    opacity: 1;
+    transition: opacity 2s ease; /* Adjust duration and easing as needed */
+}
+#page1 {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, white 0%, white 22%, black 22%, black 78%, white 78%, white 100%);
+  font-family: Arial, sans-serif;
+  color: black;
+  
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100vh;
+}
+
+#normalstyle {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, white 0%, white 15%, black 15%, black 85%, white 85%, white 100%);
+  font-family: Arial, sans-serif;
+  color: black;
+  
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100vh;
+}
+#page2 {
+  background-color: white;
+  opacity: 0;
+  margin: 0;
+}
+h2 {
+  font-size: 80px;
+  text-align: left;
+  justify-content: left;
+  align-items: left;
+  line-height: 1.2;
+  margin-top: 30px;
+  margin-left: 350px; 
+  margin-bottom: 60px;
+}
+
+p {
+  
+  font-size: 18px;
+  margin: 10px 0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.whitetext {
+  color: white;
+}
+
+
+.footer {
+  margin-top: auto;
+  background: linear-gradient(to right, white 0%, white 22%, black 22%, black 78%, white 78%, white 100%);
+}
+
+.centered-image {
+  z-index: 10;
+  width: 90px; /* Set the width to your desired size */
+  height: 50px;
+  position: absolute;
+  top: 97%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.header {
+  background: linear-gradient(to right, white 0%, white 22%, black 22%, black 78%, white 78%, white 100%);
+  text-align: center;
+  padding: 20px 0; /* Adjust as needed for spacing */
+}
+
+.centered-image2 {
+  z-index: 10;
+  width: 90px; /* Set the width to your desired size */
+  height: 50px; /* Set the height to your desired size */
+  display: block;
+  position: absolute;
+  left: 48%;
+  transform: translate(0, 41%);
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+
+
+
+.container {
+  width: 100vw;
+  min-width: 100%;
+  height: 100vh;
+  min-height: 100%;
+  position: relative;
+  background: linear-gradient(to right, white 0%, white 22%, black 22%, black 78%, white 78%, white 100%);
+}
+
+.menu_overlay {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  overflow: hidden;
+  color: #fff;
+  background: white;
+  z-index: 100;
+  transform: translateX(110%);
+  transition: transform 0.5s ease;
+}
+
+.menu_overlay .fas {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 2.5rem;
+  transition: all 0.3s ease;
+}
+
+.menu_overlay .fas:hover {
+  color: #f10b0b;
+  transform: scale(1.1) rotate(180deg);
+}
+
+.menu_overlay a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu_overlay a:hover {
+  color: #f10b0b;
+}
+
+#menuBtn {
+  display: none;
+}
+
+#menuBtn:checked ~ .menu_overlay {
+  transform: translateX(0);
+}
+
+.landing_page {
+  max-height: 100vh;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.fas {
+  font-size: 2rem;
+  color: #222;
+}
+
+.fas:hover {
+  color: #f10b0b;
+}
+
+.side_text {
+  height: 10vh;
+  width: 60%;
+  color: #c94b4b;
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  text-shadow: 0 0 1px #111;
+  padding: 10px;
+  font-size: 16px;
+  color: #4b134f;
+}
+
+.main_text {
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 0 1px #111;
+  display: flex;
+  flex-direction: column;
+}
+
+.h2-l {
+  font-size: 4rem;
+  margin-left: 100px;
+  background-color: black;
+  margin-top: -120px;
+  padding: 200px;
+  z-index: 0;
+}
+
+@media screen and (max-width: 650px) {
+  .list a {
+    font-size: 2rem;
+  }
+}
