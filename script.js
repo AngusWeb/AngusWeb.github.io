@@ -27,8 +27,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  console.log("Script.js loaded successfully!");
-  if (document.referrer.indexOf("AngusWeb.github.io") === -1) {
-    window.location.href = "unauthorized.html";
-}
+
 });
